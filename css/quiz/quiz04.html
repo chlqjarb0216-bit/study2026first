@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 전체선택자 -> 모든 요소에 기본 세팅 적용 */
+        * {
+            margin: 0;  /* 외부 여백 0 */
+            padding: 0; /* 내부 여백 0 */
+            box-sizing: border-box;
+            /* 박스모델에 사이즈 지정시, border 까지 사이즈 로 인식 */
+        }
+
+        .light-gray {
+            background-color: lightgray;
+        }
+
+        .container {
+            width: 500px;
+            height: 300px;
+            position: relative;
+            border: 5px solid black;
+            left: 50px;
+            top: 50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .a-box {
+            background-color: red;
+        }
+
+        .b-box {
+            background-color: green;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        .c-box {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="light-gray">
+        <h3>배경색이 lightgray</h3>
+        <h3>h3글자</h3> 
+    </div>
+
+    <div class="container">
+        <div class="box a-box">A</div>
+        <div class="box b-box">B</div>
+        <div class="box c-box">C</div>
+    </div>
+</body>
+</html>
