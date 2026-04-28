@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .back {
+            background-color: green;
+        }
+
+        .back-img {
+            background-image: url('../../images/img001.jpg');
+            /* background-size : 배경 이미지 사이즈 조절 속성
+                cover : 요소의 크기에 맞게 배경 이미지를 확대 또는 축소하여 요소를 완전히 덮도록 설정
+                contain : 요소의 크기에 맞게 배경 이미지를 확대 또는 축소하여 요소 안에 완전히 들어가도록 설정
+                auto : 배경 이미지의 원래 크기를 유지하면서 표시 (기본값)
+            */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .back-img2 {
+            background-image: url('../../images/img002.jpg');
+            background-repeat: no-repeat;
+            /* block-size: cover; */
+            background-position: right top;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box back"></div>
+    <div class="box back-img"></div>
+    <div class="box back-img2"></div>
+
+</body>
+</html>
