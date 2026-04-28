@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 전체선택자 -> 모든 요소에 기본 세팅 적용 */
+        * {
+            margin: 0;  /* 외부 여백 0 */
+            padding: 0; /* 내부 여백 0 */
+            box-sizing: border-box;
+            /* 박스모델에 사이즈 지정시, border 까지 사이즈 로 인식 */
+        }
+
+        .container {
+            width: 200px;
+            background-color: lightgray;
+            position: relative;
+        }
+
+        .menu {
+            height: 50px;
+            text-align: center;
+        }
+
+        .submenu {
+            position: absolute;
+            width: 100%;
+            background-color: aquamarine;
+            top: 50px; /* 메뉴 바로 아래에 위치 */
+            left: 0;
+            display: none; /* 기본적으로 숨김 */
+        }
+
+        .item {
+            height: 50px;
+        }
+
+        /* .menu:hover ~ .submenu {
+            display: block; /* 메뉴에 마우스 오버 시 서브메뉴 표시(서브메뉴로 옮겨가면 꺼짐) */
+        /* } */
+
+        .container:hover .submenu {
+            display: block; 
+        }
+
+        .item:hover {
+            background-color: burlywood; /* 메뉴 아이템에 마우스 오버 시 배경색 변경 */
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="menu">Menu</div>
+        <div class="submenu">
+            <div class="item">submenu item1</div>
+            <div class="item">submenu item2</div>
+            <div class="item">submenu item3</div>
+        </div>
+    </div>
+
+</body>
+</html>
